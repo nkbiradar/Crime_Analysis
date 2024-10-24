@@ -1,0 +1,99 @@
+/* Container for the entire Violent Crimes section */
+.violent-container {
+    margin: 80px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents horizontally */
+    text-align: center; /* Center text alignment */
+    color: #fff; /* Adjust text color for visibility */
+    background-color: #000; /* Ensure background is consistent */
+}
+
+/* Header styles */
+.violent-header {
+    margin-bottom: 40px; /* Space below the header */
+    max-width: 800px; /* Limit the width of the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center header content */
+}
+
+/* Ensure there are no other elements with unexpected visibility */
+.violent-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff; /* Light color for contrast on dark background */
+}
+
+.violent-header p {
+    font-size: 18px;
+    color: #aaa; /* Lighter color for sub-heading */
+}
+
+/* Forcefully hide any duplicate or unwanted content */
+.violent-left,
+.violent-content-left {
+    display: none !important; /* Ensure duplicate elements are hidden */
+}
+
+/* Grid container for images */
+.violent-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    width: 100%;
+    max-width: 1200px; /* Optional: restrict the maximum width */
+    text-align: center;
+}
+
+/* Individual crime item */
+.violen {
+    flex-basis: 30%;
+    position: relative;
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.violen:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Images for each crime */
+.violen img {
+    width: 375px;
+    height: 300px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Caption overlay */
+.caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+/* Caption image styling */
+.caption img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px; /* Smaller gap to the text */
+}
+
+/* Show the caption on hover */
+.violen:hover .caption {
+    opacity: 1;
+}

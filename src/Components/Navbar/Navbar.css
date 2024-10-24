@@ -1,0 +1,119 @@
+/* Navbar Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000; /* Dark background for navbar */
+}
+
+ul {
+  display: flex;
+  align-items: center; /* Ensure items are aligned on the same line */
+  list-style-type: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  margin-right: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+  width: 200px;
+}
+
+.dropdown-item {
+  margin: 5px 0;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sub-dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 200px; /* Aligns sub-menu beside the main menu */
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
+}
+
+.sub-dropdown-menu li {
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.sub-dropdown-menu li:hover {
+  background-color: #555;
+}
+
+/* Image styling for logo */
+.logos {
+  width: 80px;
+  height: auto;
+}
+
+/* Dark navbar styling */
+.dark-nav {
+  background-color: #1a1a1a;
+}
+
+/* Main Content Section */
+.main-content {
+  display: block; /* Ensure content is stacked vertically */
+  width: 100%;
+  margin-top: 20px; /* Space below the navbar */
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Property Crimes Section */
+.property-crimes-section {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center align content */
+  margin-top: 40px; /* Add margin to separate sections */
+  padding: 20px;
+}
+
+.property-crimes-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.property-crimes-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.property-crimes-images img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
