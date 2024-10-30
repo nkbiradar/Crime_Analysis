@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className='container dark-nav'>
-      <img src={logos} alt="" className='logos' />
+      <img src={logos} alt="Logo" className='logos' />
 
       <ul>
         <li>Home</li>
@@ -34,20 +34,58 @@ const Navbar = () => {
               <li className='dropdown-item' 
                 onMouseEnter={() => handleMouseEnter('violent')}>
                 Violent Crimes
+                {activeCrimeType === 'violent' && (
+                  <ul className='sub-dropdown-menu'>
+                    <li>Murder</li>
+                    <li>Rapes</li>
+                    <li>Kidnappings</li>
+                  </ul>
+                )}
               </li>
               <li className='dropdown-item'
                 onMouseEnter={() => handleMouseEnter('property')}>
                 Property Crimes
+                {activeCrimeType === 'property' && (
+                  <ul className='sub-dropdown-menu'>
+                    <li>Robbery</li>
+                    <li>Burglary</li>
+                    <li>Theft</li>
+                    <li>Auto Theft</li>
+                  </ul>
+                )}
               </li>
               <li className='dropdown-item'
                 onMouseEnter={() => handleMouseEnter('cyber')}>
                 Cyber Crimes
+                {activeCrimeType === 'cyber' && (
+                  <ul className='sub-dropdown-menu'>
+                    <li>Fraud</li>
+                    <li>Cyberbullying</li>
+                    <li>Hacking</li>
+                  </ul>
+                )}
               </li>
               <li className='dropdown-item'
                 onMouseEnter={() => handleMouseEnter('white-collar')}>
                 White Collar Crimes
+                {activeCrimeType === 'white-collar' && (
+                  <ul className='sub-dropdown-menu'>
+                    <li>Corruption</li>
+                    <li>Credit Card Fraud</li>
+                  </ul>
+                )}
               </li>
-              <li className='dropdown-item'>Juvenile Crimes</li>
+              {/* Juvenile Crimes Dropdown */}
+              <li className='dropdown-item'
+                onMouseEnter={() => handleMouseEnter('juvenile')}>
+                Juvenile Crimes
+                {activeCrimeType === 'juvenile' && (
+                  <ul className='sub-dropdown-menu'>
+                    <li>Juvenile Crime</li>
+                    <li>Assaultment Crime</li>
+                  </ul>
+                )}
+              </li>
               <li className='dropdown-item'>IPC Crimes</li>
               <li className='dropdown-item'>Child Abuse</li>
               <li className='dropdown-item'>Person Arrested Age</li>
@@ -55,43 +93,9 @@ const Navbar = () => {
               <li className='dropdown-item'>Spatial Crimes</li>
             </ul>
           )}
-
-          {/* Sub-menu for detailed crimes */}
-          {activeCrimeType && (
-            <ul className='sub-dropdown-menu'>
-              {activeCrimeType === 'violent' && (
-                <>
-                  <li>Murder</li>
-                  <li>Rapes</li>
-                  <li>Kidnappings</li>
-                </>
-              )}
-              {activeCrimeType === 'property' && (
-                <>
-                  <li>Robbery</li>
-                  <li>Burglary</li>
-                  <li>Theft</li>
-                  <li>Auto Theft</li>
-                </>
-              )}
-              {activeCrimeType === 'cyber' && (
-                <>
-                  <li>Fraud</li>
-                  <li>Cyberbullying</li>
-                  <li>Hacking</li>
-                </>
-              )}
-              {activeCrimeType === 'white-collar' && (
-                <>
-                  <li>Corruption</li>
-                  <li>Fraud</li>
-                </>
-              )}
-            </ul>
-          )}
         </li>
 
-        <li>Miscellaneous</li> {/* Removed button styling here */}
+        <li>Miscellaneous</li>
       </ul>
     </nav>
   );

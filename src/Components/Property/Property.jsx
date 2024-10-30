@@ -13,8 +13,8 @@ const Property = () => {
   return (
     <div className="property">
       <div className="property-right">
-        <h3>ABOUT PROPERTY CRIMES</h3>
-        <h2>Insights into Offenses Involving Theft and Damage to Property</h2>
+        <h1>Property Crimes</h1>
+        <p>Understanding Patterns in Property Crimes: Theft, Burglary & Vandalism</p>
       </div>
       <div className="property-left">
         <div className="property-item">

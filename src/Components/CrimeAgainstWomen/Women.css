@@ -1,0 +1,135 @@
+/* Crimes Against Women Section */
+.women {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Header styles */
+.women-header {
+    margin-bottom: 40px;
+}
+
+.women-header h1 {
+    font-size: 3em;
+    color: #ff4081; /* Vibrant pink */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.women-header p {
+    font-size: 1.4em;
+    color: #e0e0e0;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Fade-in animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container for the single crime item */
+.women-content {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px; /* 3D perspective */
+}
+
+/* Crime item styling */
+.women-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.women-item:hover {
+    transform: rotateY(10deg) scale(1.05); /* 3D tilt effect */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Image styling with scale and overlay on hover */
+.image {
+    width: 400px;
+    height: 270px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.women-item:hover .image {
+    transform: scale(1.15); /* Larger scale on hover */
+}
+
+/* Gradient overlay effect */
+.women-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: inherit;
+}
+
+.women-item:hover:before {
+    opacity: 1; /* Overlay appears on hover */
+}
+
+/* Caption styling with slide and fade-in effect */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    padding: 20px;
+    font-size: 1.2em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 0 0 15px 15px;
+    font-weight: 600;
+}
+
+.women-item:hover .caption {
+    opacity: 1; /* Caption appears on hover */
+    transform: translateY(0); /* Slides into place */
+}
+
+/* Caption text styling */
+.caption p {
+    margin: 0;
+}

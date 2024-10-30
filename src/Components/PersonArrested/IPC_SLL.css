@@ -1,0 +1,123 @@
+/* Container styling */
+.arrested-container {
+    padding: 20px;
+    background-color: #f4f6f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centered with some margin */
+    max-width: 800px; /* Maximum width */
+}
+
+/* Title styling */
+.arrested-container h2 {
+    font-size: 26px;
+    color: #2e2e2e;
+    margin-bottom: 20px;
+    text-align: center; /* Center align title */
+}
+
+/* Search bar styling */
+.arrested-search-bar {
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    margin-bottom: 20px;
+}
+
+.arrested-search-bar input {
+    width: 80%; /* Width of the search bar */
+    padding: 12px; /* Padding for the input */
+    font-size: 16px; /* Font size */
+    border: 1px solid #ddd; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
+    outline: none; /* No outline */
+}
+
+.arrested-search-bar input:focus {
+    border-color: #ff5722; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(255, 87, 34, 0.5); /* Shadow effect */
+}
+
+/* List styling */
+.arrested-list {
+    display: flex;
+    flex-direction: column; /* Column layout for items */
+    gap: 20px; /* Space between items */
+}
+
+.arrested-item {
+    display: flex; /* Flex layout for each item */
+    gap: 15px; /* Space between image and details */
+    padding: 15px; /* Padding for item */
+    background-color: #fff; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.arrested-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Image styling */
+.arrested-image {
+    width: 120px; /* Fixed width */
+    height: 80px; /* Fixed height */
+    border-radius: 5px; /* Rounded corners */
+    object-fit: cover; /* Cover the area */
+}
+
+.details {
+    flex: 1; /* Flex property for details */
+}
+
+.details h3 {
+    font-size: 18px; /* Title font size */
+    color: #333; /* Title color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Info styling */
+.info {
+    display: flex; /* Flex layout for info items */
+    gap: 10px; /* Space between info items */
+}
+
+.info-item {
+    display: flex; /* Flex layout for each info item */
+    align-items: center; /* Center align items */
+}
+
+.icon {
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.info-item p {
+    font-size: 14px; /* Info text size */
+    color: #555; /* Info text color */
+}
+
+/* No results found styling */
+.arrested-list p {
+    text-align: center; /* Center align no results message */
+    color: #ff5722; /* Warning color */
+    font-size: 16px; /* Font size */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .arrested-search-bar input {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .arrested-item {
+        flex-direction: column; /* Column layout on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .arrested-image {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Automatic height */
+    }
+}

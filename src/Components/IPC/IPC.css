@@ -1,0 +1,79 @@
+/* IPC Container */
+.ipc-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 120px; /* Adjust for navbar spacing */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Title Styling */
+  .ipc-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Search Bar Styling */
+  .ipc-search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .ipc-search-bar input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .ipc-search-bar input:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  }
+  
+  /* IPC List Styling */
+  .ipc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .ipc-item {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .ipc-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ipc-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .ipc-item p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .ipc-search-bar input {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,105 @@
+/* Container for the entire White-Collar Crimes section */
+.white-collar-container {
+    margin: 80px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents horizontally */
+    text-align: center; /* Center text alignment */
+    color: #fff; /* Adjust text color for visibility */
+    background-color: #2c3e50; /* Dark background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+}
+
+/* Header styles */
+.white-collar-header {
+    margin-bottom: 40px; /* Space below the header */
+    max-width: 800px; /* Limit the width of the text */
+}
+
+.white-collar-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Bright color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.white-collar-header p {
+    font-size: 18px;
+    color: #ddd; /* Lighter color for sub-heading */
+}
+
+/* Grid container for images */
+.white-collar-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    width: 100%;
+    max-width: 800px; /* Optional: restrict the maximum width */
+    text-align: center;
+}
+
+/* Individual white-collar crime item */
+.white-collar-item {
+    flex-basis: 45%; /* Adjusted to fit two items in a row */
+    position: relative;
+    overflow: hidden; /* Prevents overflow on hover */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+}
+
+/* Ensure all images are the same size */
+.white-collar-item img {
+    width: 100%; /* Set to full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure images cover the entire area */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+/* Image hover effect */
+.white-collar-item:hover {
+    transform: translateY(-5px); /* Slight upward movement */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+}
+
+/* Caption overlay */
+.caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.6); /* Darker overlay for better contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+/* Caption image styling */
+.caption img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px; /* Smaller gap to the text */
+}
+
+/* Show the caption on hover */
+.white-collar-item:hover .caption {
+    opacity: 1; /* Fade in caption */
+}
+
+/* Caption text styling */
+.caption p {
+    font-size: 18px;
+    font-weight: bold; /* Bold text for emphasis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}

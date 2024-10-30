@@ -1,0 +1,91 @@
+/* Cyber Crimes Section */
+.cyber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34; /* Darker background for a modern look */
+    padding: 40px 20px; /* Increased padding for better spacing */
+    border-radius: 15px; /* Rounded corners for depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    color: #fff; /* White text for contrast */
+}
+
+/* Header styles */
+.cyber-right {
+    text-align: center;
+    margin-bottom: 30px; /* More space below header */
+}
+
+.cyber-right h1 {
+    font-size: 2.5em;
+    color: #ffcc00; /* Light yellow for header */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.cyber-right p {
+    font-size: 1.2em;
+    color: #ddd; /* Lighter gray for paragraph */
+}
+
+/* Container for items */
+.cyber-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items */
+}
+
+/* Individual cyber crime item */
+.cyber-item {
+    position: relative;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.cyber-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+/* Images for each crime */
+.cyber-item img {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    border-radius: 10px; /* Match item border radius */
+}
+
+/* Caption styling */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Darker background for caption */
+    color: white; /* White text for contrast */
+    text-align: center;
+    padding: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.cyber-item:hover .caption {
+    opacity: 1; /* Show caption on hover */
+}
+
+/* Caption text styling */
+.caption p {
+    margin: 0;
+    font-size: 1.1em; /* Slightly smaller font size */
+    font-weight: bold; /* Bold caption text */
+}
+
+/* Icon image styling within captions */
+.caption img {
+    width: 40px; /* Set the desired width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between icon and text */
+}

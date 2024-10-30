@@ -1,52 +1,86 @@
+/* Property Crimes Section */
 .property {
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-  }
-  
-  .property-right {
-    margin-bottom: 20px;
-  }
-  
-  .property-left {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Adjust gap as needed */
-  }
-  
-  .property-item {
-    position: relative;
-    flex-basis: 22%;
-  }
-  
-  .image {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-  }
-  
-  .caption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 15, 152, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  
-  .property-item:hover .caption {
-    opacity: 1;
-  }
-  
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  padding: 40px 20px; /* Add padding for better spacing */
+  background-color: #1a1a1a; /* Dark background for depth */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+/* Header styles */
+.property-right h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Increased space below title */
+  color: #ffcc00; /* Light yellow for contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+.property-right p {
+  font-size: 18px;
+  color: #aaa; /* Lighter color for sub-heading */
+  margin-bottom: 30px; /* Space between paragraph and images */
+}
+
+/* Container for images */
+.property-left {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust gap as needed */
+  margin-top: 20px; /* Added space above images */
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+/* Individual property crime item */
+.property-item {
+  position: relative;
+  flex-basis: 22%;
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+}
+
+.property-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Images for each crime */
+.image {
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover to maintain aspect ratio */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Caption overlay */
+.caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Show the caption on hover */
+.property-item:hover .caption {
+  opacity: 1;
+}
+
+/* Caption text styling */
+.caption p {
+  font-size: 1.2em; /* Increase font size for caption text */
+  margin: 0; /* Remove default margin */
+}

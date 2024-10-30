@@ -1,0 +1,45 @@
+.spatial-analysis-container {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #dfeffc, #f7fafd); /* Softer gradient for a clean, modern look */
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.05); /* Multi-layered shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spatial-analysis-container:hover {
+    transform: translateY(-8px); /* Slightly more pronounced hover effect */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15), 0 24px 60px rgba(0, 0, 0, 0.1);
+}
+
+.spatial-analysis-container h2 {
+    color: #003366; /* Deeper blue to create contrast with the background */
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px; /* Subtle letter spacing for a more refined look */
+}
+
+.spatial-analysis-container p {
+    color: #444; /* Slightly darker text for contrast and readability */
+    font-size: 18px;
+    margin-bottom: 28px;
+    line-height: 1.6;
+    max-width: 800px; /* Constrains text width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 123, 255, 0.4); /* Softer blue border */
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3), 0 8px 40px rgba(0, 123, 255, 0.15); /* Layered shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#map:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.5), 0 16px 50px rgba(0, 123, 255, 0.3);
+}

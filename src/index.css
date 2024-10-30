@@ -16,10 +16,14 @@ a{
   line-height: 1;
   cursor: pointer;
 }
-.container{
+.container {
+  display: flex;
+  flex-direction: column; /* Ensures children stack vertically */
   padding-left: 10%;
   padding-right: 10%;
+  /* margin-bottom: 20px; Optional spacing between containers */
 }
+
 .btn{
   background: white;
   color: #212121;
